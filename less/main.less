@@ -1,0 +1,192 @@
+@import "normalize";
+@import "_octicons";
+
+
+@lightest-gray: #F5F5F5;
+@light-gray: #E5E5E5;
+@gray: #DDDDDD;
+@dark-gray: #666666;
+@darkish-gray: #999999;
+@darkest-gray: #333333;
+
+@blue: #4484C2;
+@green: #8AD971;
+@dark-green: #64B04B;
+
+
+body {
+    background-color: white;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    color: @blue;
+    line-height: 1.5;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+span {
+    line-height: 1.5;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline-block;
+    }
+}
+
+h2 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin: 0;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin: 0;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+.text-muted {
+    color: @gray;
+}
+
+hr {
+    background-color: @light-gray;
+    border: none;
+    height: 1px;
+    margin: 1em 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.even-children > * {
+    flex: 1 0 0;
+}
+
+.pull-left {
+    float: left;
+}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.header {
+    background-color: @lightest-gray;
+    border-bottom: 1px solid @gray;
+    padding: .6em;
+    .inner-header {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 980px;
+    }
+    .octicon {
+        font-size: 1.7em;
+        padding-right: .3em;
+    }
+    .input {
+        font-size: 12px;
+        padding: .6em;
+        vertical-align: super;
+        width: 29em;
+    }
+    img {
+        width: 20px;
+    }
+    .menu {
+        li {
+            padding-left: .9em;
+        }
+        a {
+            color: @darkest-gray;
+            text-decoration: none;
+            font-size: .95em;
+            font-weight: bold;
+            &:hover {
+                color: @blue;
+            }
+        }
+        .octicon {
+            font-size: 1rem;
+            &.octicon-inbox {
+                font-size: 1.3rem;
+            }
+            &.octicon-plus {
+                font-size: 1.1rem;
+            }
+            &.octicon-triangle-down {
+                font-size: .7rem;
+            }
+        }
+    }
+}
+
+.main {
+    margin: 1em auto;
+    max-width: 980px;
+}
+
+.profile {
+    float: left;
+    img {
+        max-width: 230px;
+    }
+    .octicon {
+        padding-right: .5em;
+    }
+    .stats {
+        text-align: center;
+        .number {
+            color: @blue;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        span {
+            color: @darkish-gray;
+            font-size: .7rem;
+        }
+    }
+}
+
+.org-link {
+    display: inline-block;
+}
+
+.activity {
+    float: left;
+}
+
+.input {
+    background-color: white;
+    border: 1px solid darken(@gray, 5%);
+    border-radius: 2px;
+    box-shadow: inset 0 1px 2px fade(black, 7.5%);
+    padding: .4em;
+}
