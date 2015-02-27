@@ -6,6 +6,7 @@ var Page = (function(){
         this.showProfile();
         this.convertTime();
         this.showOrgs();
+        this.showRepos();
     }
 
 
@@ -34,6 +35,18 @@ var Page = (function(){
 
             var orgList = new OrgList(this.data.orgs);
             $(".profile").append(orgList.render());
+        },
+
+        showRepos: function() {
+            var $container = $(".repos").empty();
+            var repos = _.sortBy(this.data.repos, "pushed_at").reverse();
+
+            _.each(repos, function(repo) {
+                var newRepo = new Repo(repo);
+                console.log(newRepo);
+                $container.append(newRepo.render());
+            });           
+
         }
 
     };
