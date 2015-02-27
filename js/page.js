@@ -46,7 +46,6 @@ var Page = (function(){
                 var newRepo = new Repo(repo);
                 $container.append(newRepo.render());
             });           
-
         },
 
         addStarred: function() {

@@ -70,9 +70,13 @@ this["JST"]["repo"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"mai
     + escapeExpression(((helper = (helper = helpers.update_time || (depth0 != null ? depth0.update_time : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"update_time","hash":{},"data":data}) : helper)))
     + "</span></p>\n    </div>\n    <div class=\"text-muted text-small\">\n        <span class=\"\"><strong>"
     + escapeExpression(((helper = (helper = helpers.language || (depth0 != null ? depth0.language : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"language","hash":{},"data":data}) : helper)))
-    + "</strong></span>\n        <span><span class=\"octicon octicon-star\"></span> <strong>"
+    + "</strong></span>\n        <a class=\"text-muted\" href=\""
+    + escapeExpression(((helper = (helper = helpers.stargazers_url || (depth0 != null ? depth0.stargazers_url : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"stargazers_url","hash":{},"data":data}) : helper)))
+    + "\"><span class=\"octicon octicon-star\"></span> <strong>"
     + escapeExpression(((helper = (helper = helpers.stargazers_count || (depth0 != null ? depth0.stargazers_count : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"stargazers_count","hash":{},"data":data}) : helper)))
-    + "</strong></span>\n        <span><span class=\"octicon octicon-git-branch\"></span> <strong>"
+    + "</strong></a>\n        <a class=\"text-muted\" href=\""
+    + escapeExpression(((helper = (helper = helpers.forks_url || (depth0 != null ? depth0.forks_url : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"forks_url","hash":{},"data":data}) : helper)))
+    + "\"><span class=\"octicon octicon-git-branch\"></span> <strong>"
     + escapeExpression(((helper = (helper = helpers.forks_count || (depth0 != null ? depth0.forks_count : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"forks_count","hash":{},"data":data}) : helper)))
-    + "</strong></span>\n    </div>\n</div>";
+    + "</strong></a>\n    </div>\n</div>";
 },"useData":true});
