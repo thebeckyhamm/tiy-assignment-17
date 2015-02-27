@@ -4,10 +4,10 @@
 
 @lightest-gray: #F5F5F5;
 @light-gray: #E5E5E5;
-@gray: #DDDDDD;
+@gray: #CCCCCC;
 @dark-gray: #666666;
-@darkish-gray: #999999;
-@darkest-gray: #333333;
+@darkest-gray: #888888;
+@almost-black: #333333;
 
 @blue: #4484C2;
 @green: #8AD971;
@@ -29,8 +29,11 @@ a {
     &.muted {
         color: @dark-gray;
     }
+    &.text-light-muted {
+        color: @gray;
+    }
     &.current {
-        color: @darkest-gray;
+        color: @almost-black;
         font-weight: bold;
     }
 }
@@ -76,8 +79,16 @@ h4 {
     color: @dark-gray;
 }
 
+.text-lighter-muted {
+    color: @gray;
+}
+
 .text-small {
     font-size: .75rem;
+}
+
+.text-right {
+    text-align: right;
 }
 
 hr {
@@ -117,7 +128,7 @@ hr {
 .header {
     background-color: @lightest-gray;
     border-bottom: 1px solid @gray;
-    padding: .6em;
+    padding: .7em;
     .inner-header {
         display: flex;
         align-items: center;
@@ -125,7 +136,7 @@ hr {
         max-width: 980px;
     }
     .octicon {
-        font-size: 1.7em;
+        font-size: 1.8rem;
         padding-right: .3em;
     }
     .input {
@@ -142,7 +153,7 @@ hr {
             padding-left: .9em;
         }
         a {
-            color: @darkest-gray;
+            color: @almost-black;
             text-decoration: none;
             font-size: .95em;
             font-weight: bold;
@@ -166,8 +177,13 @@ hr {
 }
 
 .main {
-    margin: 1em auto;
+    margin: 1em auto 3em auto;
     max-width: 980px;
+    &:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
 }
 
 .profile {
@@ -199,7 +215,7 @@ a.stats {
         text-decoration: none;
     }
     .stats-desc {
-        color: @darkish-gray;
+        color: @darkest-gray;
         font-size: .7rem;
         text-decoration: none;
     }
@@ -236,7 +252,7 @@ a.stats {
         border: 1px solid @gray;
         border-bottom-color: white;
         border-radius: .25em .25em 0 0;
-        color: @darkest-gray;
+        color: @almost-black;
     }
     .btn {
         float: right;
@@ -274,8 +290,31 @@ a.stats {
             padding-left: .4em;
             
         }
+        .octicon {
+            font-size: .9rem;
+        }
     }
 
+}
+
+.footer {
+    border-top: 1px solid @light-gray;
+    color: @dark-gray;
+    font-size: .75rem;
+    margin: 0 auto;
+    padding: 3rem 0;
+    max-width: 980px;
+    li {
+        padding-left: 1em;
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+    .footer-center {
+        .octicon {
+            font-size: 1.5rem;
+        }
+    }
 }
 
 

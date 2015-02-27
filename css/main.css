@@ -1136,6 +1136,9 @@ a:hover {
 a.muted {
   color: #666666;
 }
+a.text-light-muted {
+  color: #cccccc;
+}
 a.current {
   color: #333333;
   font-weight: bold;
@@ -1173,8 +1176,14 @@ h4 {
 .text-muted {
   color: #666666;
 }
+.text-lighter-muted {
+  color: #cccccc;
+}
 .text-small {
   font-size: .75rem;
+}
+.text-right {
+  text-align: right;
 }
 hr {
   background-color: #e5e5e5;
@@ -1205,8 +1214,8 @@ hr {
 }
 .header {
   background-color: #f5f5f5;
-  border-bottom: 1px solid #dddddd;
-  padding: .6em;
+  border-bottom: 1px solid #cccccc;
+  padding: .7em;
 }
 .header .inner-header {
   display: flex;
@@ -1215,7 +1224,7 @@ hr {
   max-width: 980px;
 }
 .header .octicon {
-  font-size: 1.7em;
+  font-size: 1.8rem;
   padding-right: .3em;
 }
 .header .input {
@@ -1252,8 +1261,13 @@ hr {
   font-size: .7rem;
 }
 .main {
-  margin: 1em auto;
+  margin: 1em auto 3em auto;
   max-width: 980px;
+}
+.main:after {
+  content: "";
+  clear: both;
+  display: table;
 }
 .profile {
   float: left;
@@ -1283,7 +1297,7 @@ a.stats .stats-number {
   text-decoration: none;
 }
 a.stats .stats-desc {
-  color: #999999;
+  color: #888888;
   font-size: .7rem;
   text-decoration: none;
 }
@@ -1303,7 +1317,7 @@ a.stats:hover .stats-desc {
   width: calc(100% - (230px + 1.5em));
 }
 .tabs {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #cccccc;
   margin-top: .5em;
 }
 .tabs .tab {
@@ -1311,7 +1325,7 @@ a.stats:hover .stats-desc {
   padding: .6em 1em;
 }
 .tabs .tab-active {
-  border: 1px solid #dddddd;
+  border: 1px solid #cccccc;
   border-bottom-color: white;
   border-radius: .25em .25em 0 0;
   color: #333333;
@@ -1321,7 +1335,7 @@ a.stats:hover .stats-desc {
   padding: .25em .75em;
 }
 .search-filters {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #cccccc;
   padding: 1em 0;
 }
 .search-filters .input {
@@ -1350,8 +1364,28 @@ a.stats:hover .stats-desc {
   display: inline-block;
   padding-left: .4em;
 }
+.repo .text-small .octicon {
+  font-size: .9rem;
+}
+.footer {
+  border-top: 1px solid #e5e5e5;
+  color: #666666;
+  font-size: .75rem;
+  margin: 0 auto;
+  padding: 3rem 0;
+  max-width: 980px;
+}
+.footer li {
+  padding-left: 1em;
+}
+.footer li:first-child {
+  padding-left: 0;
+}
+.footer .footer-center .octicon {
+  font-size: 1.5rem;
+}
 .btn {
-  border: 1px solid #dddddd;
+  border: 1px solid #cccccc;
   border-radius: 3px;
   font-size: .8rem;
   font-weight: bold;
@@ -1371,7 +1405,7 @@ a.stats:hover .stats-desc {
 }
 .input {
   background-color: white;
-  border: 1px solid #d0d0d0;
+  border: 1px solid #bfbfbf;
   border-radius: 3px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
   font-size: .8rem;
