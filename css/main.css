@@ -1128,11 +1128,15 @@ body {
 }
 a {
   color: #4484c2;
-  line-height: 1.5;
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
+}
+p {
+  line-height: 1.5;
+  margin-bottom: .5em;
+  margin-top: 0;
 }
 span {
   line-height: 1.5;
@@ -1157,6 +1161,7 @@ h3 {
 }
 h4 {
   font-size: 1rem;
+  margin-bottom: 1em;
 }
 .text-muted {
   color: #dddddd;
@@ -1246,23 +1251,39 @@ hr {
 .profile img {
   max-width: 230px;
 }
-.profile .octicon {
+.profile-info {
+  line-height: 1;
+  margin-bottom: .5em;
+}
+.profile-info .octicon {
+  display: inline-block;
   padding-right: .5em;
-}
-.profile .stats {
   text-align: center;
+  width: 1.25em;
 }
-.profile .stats .number {
+.stats {
+  text-align: center;
+  text-decoration: none;
+}
+.stats .stats-number {
   color: #4484c2;
   font-size: 1.8rem;
   font-weight: bold;
+  line-height: 1;
 }
-.profile .stats span {
+.stats .stats-desc {
   color: #999999;
   font-size: .7rem;
 }
+.stats:hover .stats-desc {
+  color: #4484c2;
+}
 .org-link {
   display: inline-block;
+  margin-right: .25em;
+}
+.org-link img {
+  max-width: 42px;
 }
 .activity {
   float: left;

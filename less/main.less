@@ -22,11 +22,16 @@ body {
 
 a {
     color: @blue;
-    line-height: 1.5;
     text-decoration: none;
     &:hover {
         text-decoration: underline;
     }
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: .5em;
+    margin-top: 0;
 }
 
 span {
@@ -57,6 +62,7 @@ h3 {
 
 h4 {
     font-size: 1rem;
+    margin-bottom: 1em;
 }
 
 .text-muted {
@@ -158,26 +164,47 @@ hr {
     img {
         max-width: 230px;
     }
+}
+
+.profile-info {
+    line-height: 1;
+    margin-bottom: .5em;
     .octicon {
+        display: inline-block;
         padding-right: .5em;
-    }
-    .stats {
         text-align: center;
-        .number {
+        width: 1.25em;
+    }
+}
+
+.stats {
+    text-align: center;
+    text-decoration: none;
+    .stats-number {
+        color: @blue;
+        font-size: 1.8rem;
+        font-weight: bold;
+        line-height: 1;
+    }
+    .stats-desc {
+        color: @darkish-gray;
+        font-size: .7rem;
+    }
+    &:hover {
+        .stats-desc {
             color: @blue;
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-        span {
-            color: @darkish-gray;
-            font-size: .7rem;
         }
     }
 }
 
 .org-link {
     display: inline-block;
+    margin-right: .25em;
+    img {
+        max-width: 42px;
+    }
 }
+
 
 .activity {
     float: left;

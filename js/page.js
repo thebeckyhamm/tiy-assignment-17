@@ -5,6 +5,7 @@ var Page = (function(){
         this.data = data;
         this.showProfile();
         this.convertTime();
+        this.showOrgs();
     }
 
 
@@ -17,8 +18,9 @@ var Page = (function(){
 
         convertTime: function() {
             var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            var since = this.data.user.created_at;
-            since = new Date(since);
+
+            var since = new Date(this.data.user.created_at);
+
             var month = months[since.getMonth()];
             var year = since.getFullYear();
             var date = since.getDate();
@@ -26,6 +28,12 @@ var Page = (function(){
 
             $(".joined-on").text(newDate);
 
+        },
+
+        showOrgs: function() {
+
+            var orgList = new OrgList(this.data.orgs);
+            $(".profile").append(orgList.render());
         }
 
     };
