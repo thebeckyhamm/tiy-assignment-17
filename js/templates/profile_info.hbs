@@ -2,10 +2,10 @@
 <h2>{{name}}</h2>
 <h3>{{login}}</h3>
 <hr>
-{{#if company}}<p class="profile-info"><span class="octicon octicon-organization text-muted"></span>{{company}}</p>{{/if}}
-{{#if location}}<p class="profile-info"><span class="octicon octicon-location text-muted"></span>{{location}}</p>{{/if}}
-{{#if blog}}<p class="profile-info"><span class="octicon octicon-link text-muted"></span><a href="{{blog}}">{{blog}}</a></p>{{/if}}
-<p class="profile-info"><span class="octicon octicon-clock text-muted"></span>Joined on <span class="joined-on"></span></p>
+{{#if company}}<p class="profile-info"><span class="octicon octicon-organization text-lighter-muted"></span>{{company}}</p>{{/if}}
+{{#if location}}<p class="profile-info"><span class="octicon octicon-location text-lighter-muted"></span>{{location}}</p>{{/if}}
+{{#if blog}}<p class="profile-info"><span class="octicon octicon-link text-lighter-muted"></span><a href="{{blog}}">{{blog}}</a></p>{{/if}}
+<p class="profile-info"><span class="octicon octicon-clock text-lighter-muted"></span>Joined on <span class="joined-on"></span></p>
 <hr>
 <div class="flex space-around even-children">
     <a class="stats" href="{{followers_url}}">
@@ -13,7 +13,7 @@
         <span class="stats-desc">Followers</span>
     </a>
     <a class="stats" href="{{starred_url}}">
-        <div class="stats-number">99</div>
+        <div class="stats-number starred">99</div>
         <span class="stats-desc">Starred</span>
     </a>
     <a class="stats" href="{{following_url}}">

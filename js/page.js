@@ -4,9 +4,10 @@ var Page = (function(){
     function Page(data) {
         this.data = data;
         this.showProfile();
-        this.convertTime();
+        this.convertJoinedDate();
         this.showOrgs();
         this.showRepos();
+        this.addStarred();
     }
 
 
@@ -17,7 +18,7 @@ var Page = (function(){
             $(".profile").html(profileInfo.render());
         },
 
-        convertTime: function() {
+        convertJoinedDate: function() {
             var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
             var since = new Date(this.data.user.created_at);
@@ -43,11 +44,18 @@ var Page = (function(){
 
             _.each(repos, function(repo) {
                 var newRepo = new Repo(repo);
-                console.log(newRepo);
                 $container.append(newRepo.render());
             });           
 
+        },
+
+        addStarred: function() {
+            var $container = $(".starred");
+            var countStarred = this.data.starred.length;
+            $container.text(countStarred);
         }
+
+
 
     };
 
