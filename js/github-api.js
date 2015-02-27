@@ -11,7 +11,6 @@ var GitHubAPI = (function(){
             orgs: baseURL + user + "/orgs",
             starred: baseURL + user + "/starred"
         };
-        this.token = ["3054ee97","cca05a780","c16be2d0c1","ef252b8a1629b"].join("");
     };
 
 
@@ -21,7 +20,7 @@ var GitHubAPI = (function(){
             $.ajax(url, {
 
                 data: {
-                    access_token: this.token
+                    access_token: token
                 },
 
                 success: function(data) {
