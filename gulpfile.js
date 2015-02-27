@@ -6,9 +6,24 @@ var declare     = require("gulp-declare");
 var handlebars  = require("gulp-handlebars");
 var wrap        = require("gulp-wrap");
 var browserSync = require("browser-sync");
+//gutil = require('gulp-util'),
+var notify      = require('gulp-notify');
+var plumber     = require('gulp-plumber');
+
 
 var templatePath = "./js/templates/*.hbs";
 var lessPath = "./less/main.less";
+var onError = function(err) {
+      notify.onError({
+                  title:    "Gulp",
+                  subtitle: "Failure!",
+                  message:  "Error: <%= error.message %>",
+                  sound:    "Beep"
+              })(err);
+
+      this.emit('end');
+  };
+
 
 gulp.task("bower:assets:js", function() {
 
@@ -42,8 +57,15 @@ gulp.task("templates", function(){
 gulp.task("less", function() {
 
     gulp.src(lessPath)
+        .pipe(plumber({errorHandler: onError}))
         .pipe(less())
-        .pipe(gulp.dest("./css"));
+        .pipe(gulp.dest("./css"))
+        .pipe(notify({ // Add gulpif here
+                  title: 'Gulp',
+                  subtitle: 'success',
+                  message: 'Sass task',
+                  sound: "Pop"
+              }));
 
 });
 
