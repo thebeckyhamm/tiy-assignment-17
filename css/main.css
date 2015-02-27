@@ -1133,6 +1133,13 @@ a {
 a:hover {
   text-decoration: underline;
 }
+a.muted {
+  color: #666666;
+}
+a.current {
+  color: #333333;
+  font-weight: bold;
+}
 p {
   line-height: 1.5;
   margin-bottom: .5em;
@@ -1164,7 +1171,10 @@ h4 {
   margin-bottom: 1em;
 }
 .text-muted {
-  color: #dddddd;
+  color: #666666;
+}
+.text-small {
+  font-size: .75rem;
 }
 hr {
   background-color: #e5e5e5;
@@ -1261,21 +1271,23 @@ hr {
   text-align: center;
   width: 1.25em;
 }
-.stats {
+a.stats {
   text-align: center;
   text-decoration: none;
 }
-.stats .stats-number {
+a.stats .stats-number {
   color: #4484c2;
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 1;
+  text-decoration: none;
 }
-.stats .stats-desc {
+a.stats .stats-desc {
   color: #999999;
   font-size: .7rem;
+  text-decoration: none;
 }
-.stats:hover .stats-desc {
+a.stats:hover .stats-desc {
   color: #4484c2;
 }
 .org-link {
@@ -1287,11 +1299,85 @@ hr {
 }
 .activity {
   float: left;
+  margin-left: 1.5em;
+  width: calc(100% - (230px + 1.5em));
+}
+.tabs {
+  border-bottom: 1px solid #dddddd;
+  margin-top: .5em;
+}
+.tabs .tab {
+  display: inline-block;
+  padding: .6em 1em;
+}
+.tabs .tab-active {
+  border: 1px solid #dddddd;
+  border-bottom-color: white;
+  border-radius: .25em .25em 0 0;
+  color: #333333;
+}
+.tabs .btn {
+  float: right;
+  padding: .25em .75em;
+}
+.search-filters {
+  border-bottom: 1px solid #dddddd;
+  padding: 1em 0;
+}
+.search-filters .input {
+  width: 18em;
+}
+.search-filters a {
+  padding: 0 .2em;
+}
+.repo {
+  align-items: flex-start;
+  padding: 2em 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.repo h3 {
+  color: #4484c2;
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+.repo p.text-light-muted {
+  color: #808080;
+}
+.repo .text-small {
+  color: #808080;
+}
+.repo .text-small span {
+  display: inline-block;
+  padding-left: .4em;
+}
+.btn {
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  font-size: .8rem;
+  font-weight: bold;
+  line-height: 1;
+  padding: .7em .9em;
+  background: #fcfcfc;
+  /* Old browsers */
+  background: linear-gradient(to bottom, #fcfcfc 0%, #efefef 100%);
+  display: inline-block;
+}
+.btn-green {
+  background: #79d858;
+  /* Old browsers */
+  background: linear-gradient(to bottom, #79d858 0%, #599e43 100%);
+  border: 1px solid #559740;
+  color: white;
 }
 .input {
   background-color: white;
   border: 1px solid #d0d0d0;
-  border-radius: 2px;
+  border-radius: 3px;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  font-size: .8rem;
+  line-height: 1;
   padding: .4em;
+}
+.input-fat {
+  padding: .7em;
 }
