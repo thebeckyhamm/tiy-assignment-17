@@ -22,7 +22,11 @@ var Repo = (function(){
                 updateTime = new Date(updateTime);
                 var now = new Date();
 
-                if ( now.getMonth() === updateTime.getMonth()) {
+                if ( (moment(now)).diff(moment(updateTime), 'seconds') < 60 ) {
+                    updateTime = "just now";
+                }
+
+                else if ( now.getMonth() === updateTime.getMonth()) {
                     updateTime = moment(updateTime).fromNow();    
                 }
 
