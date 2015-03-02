@@ -22,7 +22,6 @@ var GitHubAPI = (function(){
                 data: {
                     access_token: token
                 },
-
                 success: function(data) {
                     cb(data);
                 },
