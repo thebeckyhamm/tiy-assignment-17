@@ -22,7 +22,7 @@ var Repo = (function(){
                 updateTime = new Date(updateTime);
                 var now = new Date();
 
-                if ( (moment(now)).diff(moment(updateTime), 'seconds') < 60 ) {
+                if ( (moment(now)).diff(moment(updateTime), 'seconds') < 10 ) {
                     updateTime = "just now";
                 }
 
