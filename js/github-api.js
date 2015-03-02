@@ -19,9 +19,6 @@ var GitHubAPI = (function(){
         returnData: function(url, cb) {
             $.ajax(url, {
 
-                data: {
-                    access_token: token
-                },
                 success: function(data) {
                     cb(data);
                 },
